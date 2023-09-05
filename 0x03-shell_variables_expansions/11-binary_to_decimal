@@ -1,13 +1,2 @@
 #!/bin/bash
-binary="$BINARY"
-decimal=0
-position=0
-length=${#binary}
-for ((i = length - 1; i >= 0; i--)); do
-    bit="${binary:i:1}"
-    if [ "$bit" == "1" ]; then
-        decimal=$((decimal + 2**position))
-    fi
-    position=$((position + 1))
-done
-echo $decimal
+echo $((2#BINARY))
