@@ -1,8 +1,2 @@
 #!/bin/bash
-for char1 in {a..z}; do
-    for char2 in {a..z}; do
-        if [ "$char1$char2" != "oo" ]; then
-            echo "$char1$char2"
-        fi
-    done
-done
+echo {a..z} {a..z} | tr ' ''\n' | grep -v oo
